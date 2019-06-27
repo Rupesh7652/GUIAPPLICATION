@@ -132,7 +132,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.Location = new System.Drawing.Point(239, 32);
+            this.pictureBox2.Location = new System.Drawing.Point(286, 33);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 21);
             this.pictureBox2.TabIndex = 4;
@@ -153,9 +153,9 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(169, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
+            this.label3.Size = new System.Drawing.Size(111, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Texture:";
+            this.label3.Text = "TextureOption:";
             // 
             // label2
             // 
@@ -264,7 +264,7 @@
             this.panel3.Controls.Add(this.btnpen);
             this.panel3.Location = new System.Drawing.Point(0, 99);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(60, 385);
+            this.panel3.Size = new System.Drawing.Size(56, 401);
             this.panel3.TabIndex = 2;
             // 
             // btnploygon
@@ -337,9 +337,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Location = new System.Drawing.Point(62, 99);
+            this.panel4.Location = new System.Drawing.Point(60, 99);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(568, 385);
+            this.panel4.Size = new System.Drawing.Size(570, 401);
             this.panel4.TabIndex = 3;
             // 
             // rtxt_console
@@ -390,7 +390,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(859, 484);
+            this.ClientSize = new System.Drawing.Size(869, 500);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_consolerun);
             this.Controls.Add(this.btn_console1clear);
