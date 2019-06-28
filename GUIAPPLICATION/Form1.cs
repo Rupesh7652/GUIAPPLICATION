@@ -137,6 +137,92 @@ namespace GUIAPPLICATION
             rtxt_console.Text = "";
         }
 
+        private void imageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog o = new OpenFileDialog();
+            o.Filter = "PNG Files|*.png|JPEG Files|*.jpeg|Bitmap|*.bmp";
+            if (o.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                drawareapanel.BackgroundImage = (Image)Image.FromFile(o.FileName).Clone();
+                drawareapanel.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            MessageBox.Show("open");
+        }
+
+        private void imageToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfdlg = new SaveFileDialog();
+            sfdlg.Title = "Save Dialog";
+            sfdlg.Filter = "Bitmap Images (*.bmp)|*.bmp|All files(*.*)|*.*";
+            if (sfdlg.ShowDialog(this) == DialogResult.OK)
+            {
+                using (Bitmap bmp = new Bitmap(drawareapanel.Width, drawareapanel.Height))
+                {
+
+               
+                    drawareapanel.BackgroundImage = new Bitmap(drawareapanel.Width, drawareapanel.Height);
+                    drawareapanel.BackgroundImage.Save(sfdlg.FileName);
+                    bmp.Save(sfdlg.FileName);
+                    MessageBox.Show("Saved Successfully.....");
+
+                }
+            }
+        }
+
+        private void textToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                rtxt_console.LoadFile(op.FileName, RichTextBoxStreamType.PlainText);
+                this.Text = op.FileName;
+            }
+        }
+
+        private void textToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sv = new SaveFileDialog();
+            sv.Filter = "Text Document(*.txt)|*.txt|All Files(*.*)|*.*";
+            if (sv.ShowDialog() == DialogResult.OK)
+            {
+                rtxt_console.SaveFile(sv.FileName, RichTextBoxStreamType.PlainText);
+                this.Text = sv.FileName;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sv = new SaveFileDialog();
+            sv.Filter = "Text Document(*.txt)|*.txt|All Files(*.*)|*.*";
+            if (sv.ShowDialog() == DialogResult.OK)
+            {
+                rtxt_console.SaveFile(sv.FileName, RichTextBoxStreamType.PlainText);
+                this.Text = sv.FileName;
+            }
+        }
+
+
+
+        //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+        //==============================================================================================================
+        //======================-----=====----======================DECLARING =========================---------- *  *  * * * * ** * 
+        public int _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10, _size11, _size12;
+
+
+
+        /// <summary>
+        /// declaring variable for triangle
+        /// </summary>
+        public int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
+
+
+
+
+        /// <summary>
+        /// declaring variable for repeat number
+        /// </summary>
+        public int _repeatNo;
+
         private void drawareapanel_MouseClick(object sender, MouseEventArgs e)
         {
             lbl_StartPosX.Text = (e.X).ToString();
