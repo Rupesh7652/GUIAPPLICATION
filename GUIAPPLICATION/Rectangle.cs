@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GUIAPPLICATION
 {
-    class Polygon: Shape
+    class Rectangle: Shape
     {
     }
 }
