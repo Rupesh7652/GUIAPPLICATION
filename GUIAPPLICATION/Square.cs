@@ -4,38 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using System.Windows.Forms;
-
 namespace GUIAPPLICATION
 {
-    class Line : Shape
+    class Square: Shape
     {
         int x, y, size, size1;
-        Color c1;
         int texturestyle;
         Brush bb;
+        Color c1;
+        /// <summary>
+        /// getting value of Graphics g
+        /// </summary>
+        /// <param name="g"></param>
         public override void draw(Graphics g)
         {
             Pen p = new Pen(c1, 5);
             if (texturestyle == 0)
             {
-                g.DrawLine(p, x, y, size, size1);
+                g.DrawRectangle(p, x, y, size, size1);
             }
             else
             {
-                g.DrawLine(p, x, y, size, size1);
+                g.FillRectangle(bb, x, y, size, size1);
             }
+
         }
 
 
 
-
         /// <summary>
-        /// geting value to draw line
-        /// 
+        /// getting value in variable and use of getter setter
         /// </summary>
         /// <param name="texturestyle"></param>
-        /// texture for the design pattern 
         /// <param name="bb"></param>
         /// <param name="c1"></param>
         /// <param name="list"></param>

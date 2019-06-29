@@ -34,7 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.showcolorbox = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,9 +62,9 @@
             this.btn_console1clear = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtxt_errors = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtxt_history = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbl_StartPosX = new System.Windows.Forms.Label();
             this.lbl_StartPosY = new System.Windows.Forms.Label();
@@ -81,10 +80,17 @@
             this.lbl_canvasy = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.showtexturebox = new System.Windows.Forms.PictureBox();
+            this.texture5 = new System.Windows.Forms.PictureBox();
+            this.texture4 = new System.Windows.Forms.PictureBox();
+            this.texture3 = new System.Windows.Forms.PictureBox();
+            this.texture2 = new System.Windows.Forms.PictureBox();
+            this.texture1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,6 +100,13 @@
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -145,7 +158,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.showtexturebox);
             this.panel2.Controls.Add(this.showcolorbox);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -154,15 +167,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(548, 77);
             this.panel2.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox2.Location = new System.Drawing.Point(234, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 26);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // showcolorbox
             // 
@@ -228,20 +232,20 @@
             this.imageToolStripMenuItem,
             this.textToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // imageToolStripMenuItem
             // 
             this.imageToolStripMenuItem.Name = "imageToolStripMenuItem";
-            this.imageToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.imageToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.imageToolStripMenuItem.Text = "Image";
             this.imageToolStripMenuItem.Click += new System.EventHandler(this.imageToolStripMenuItem_Click);
             // 
             // textToolStripMenuItem
             // 
             this.textToolStripMenuItem.Name = "textToolStripMenuItem";
-            this.textToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.textToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.textToolStripMenuItem.Text = "Text";
             this.textToolStripMenuItem.Click += new System.EventHandler(this.textToolStripMenuItem_Click);
             // 
@@ -251,20 +255,20 @@
             this.imageToolStripMenuItem1,
             this.textToolStripMenuItem1});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // imageToolStripMenuItem1
             // 
             this.imageToolStripMenuItem1.Name = "imageToolStripMenuItem1";
-            this.imageToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.imageToolStripMenuItem1.Size = new System.Drawing.Size(119, 24);
             this.imageToolStripMenuItem1.Text = "Image";
             this.imageToolStripMenuItem1.Click += new System.EventHandler(this.imageToolStripMenuItem1_Click);
             // 
             // textToolStripMenuItem1
             // 
             this.textToolStripMenuItem1.Name = "textToolStripMenuItem1";
-            this.textToolStripMenuItem1.Size = new System.Drawing.Size(152, 24);
+            this.textToolStripMenuItem1.Size = new System.Drawing.Size(119, 24);
             this.textToolStripMenuItem1.Text = "Text";
             this.textToolStripMenuItem1.Click += new System.EventHandler(this.textToolStripMenuItem1_Click);
             // 
@@ -416,6 +420,7 @@
             this.btn_consolerun.TabIndex = 7;
             this.btn_consolerun.Text = "Run";
             this.btn_consolerun.UseVisualStyleBackColor = true;
+            this.btn_consolerun.Click += new System.EventHandler(this.btn_consolerun_Click);
             // 
             // btn_console1clear
             // 
@@ -433,6 +438,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(634, 360);
             this.tabControl1.Name = "tabControl1";
@@ -443,7 +449,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.tabPage1.Controls.Add(this.richTextBox1);
+            this.tabPage1.Controls.Add(this.rtxt_errors);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -451,19 +457,19 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Error";
             // 
-            // richTextBox1
+            // rtxt_errors
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 6);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(222, 137);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.rtxt_errors.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.rtxt_errors.Location = new System.Drawing.Point(3, 6);
+            this.rtxt_errors.Name = "rtxt_errors";
+            this.rtxt_errors.Size = new System.Drawing.Size(222, 137);
+            this.rtxt_errors.TabIndex = 0;
+            this.rtxt_errors.Text = "";
+            this.rtxt_errors.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.richTextBox2);
+            this.tabPage2.Controls.Add(this.rtxt_history);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -472,14 +478,14 @@
             this.tabPage2.Text = "History";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // richTextBox2
+            // rtxt_history
             // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.richTextBox2.Location = new System.Drawing.Point(3, 5);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(222, 137);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.rtxt_history.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.rtxt_history.Location = new System.Drawing.Point(3, 5);
+            this.rtxt_history.Name = "rtxt_history";
+            this.rtxt_history.Size = new System.Drawing.Size(222, 137);
+            this.rtxt_history.TabIndex = 1;
+            this.rtxt_history.Text = "";
             // 
             // groupBox3
             // 
@@ -646,6 +652,96 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Y:";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.texture5);
+            this.tabPage3.Controls.Add(this.texture4);
+            this.tabPage3.Controls.Add(this.texture3);
+            this.tabPage3.Controls.Add(this.texture2);
+            this.tabPage3.Controls.Add(this.texture1);
+            this.tabPage3.Controls.Add(this.richTextBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(228, 146);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Texture";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 5);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(222, 137);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
+            // 
+            // showtexturebox
+            // 
+            this.showtexturebox.BackColor = System.Drawing.Color.DarkGray;
+            this.showtexturebox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showtexturebox.BackgroundImage")));
+            this.showtexturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showtexturebox.Location = new System.Drawing.Point(229, 35);
+            this.showtexturebox.Name = "showtexturebox";
+            this.showtexturebox.Size = new System.Drawing.Size(46, 30);
+            this.showtexturebox.TabIndex = 14;
+            this.showtexturebox.TabStop = false;
+            // 
+            // texture5
+            // 
+            this.texture5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture5.BackgroundImage")));
+            this.texture5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture5.Location = new System.Drawing.Point(15, 72);
+            this.texture5.Name = "texture5";
+            this.texture5.Size = new System.Drawing.Size(30, 30);
+            this.texture5.TabIndex = 10;
+            this.texture5.TabStop = false;
+            this.texture5.Click += new System.EventHandler(this.texture5_Click);
+            // 
+            // texture4
+            // 
+            this.texture4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture4.BackgroundImage")));
+            this.texture4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture4.Location = new System.Drawing.Point(179, 26);
+            this.texture4.Name = "texture4";
+            this.texture4.Size = new System.Drawing.Size(30, 30);
+            this.texture4.TabIndex = 9;
+            this.texture4.TabStop = false;
+            this.texture4.Click += new System.EventHandler(this.texture4_Click);
+            // 
+            // texture3
+            // 
+            this.texture3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture3.BackgroundImage")));
+            this.texture3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture3.Location = new System.Drawing.Point(126, 26);
+            this.texture3.Name = "texture3";
+            this.texture3.Size = new System.Drawing.Size(30, 30);
+            this.texture3.TabIndex = 8;
+            this.texture3.TabStop = false;
+            this.texture3.Click += new System.EventHandler(this.texture3_Click);
+            // 
+            // texture2
+            // 
+            this.texture2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture2.BackgroundImage")));
+            this.texture2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture2.Location = new System.Drawing.Point(68, 26);
+            this.texture2.Name = "texture2";
+            this.texture2.Size = new System.Drawing.Size(30, 30);
+            this.texture2.TabIndex = 7;
+            this.texture2.TabStop = false;
+            this.texture2.Click += new System.EventHandler(this.texture2_Click);
+            // 
+            // texture1
+            // 
+            this.texture1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture1.BackgroundImage")));
+            this.texture1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture1.Location = new System.Drawing.Point(15, 26);
+            this.texture1.Name = "texture1";
+            this.texture1.Size = new System.Drawing.Size(30, 30);
+            this.texture1.TabIndex = 6;
+            this.texture1.TabStop = false;
+            this.texture1.Click += new System.EventHandler(this.texture1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,7 +772,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -690,6 +785,13 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -711,7 +813,6 @@
         private System.Windows.Forms.ToolStripMenuItem textToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutUsToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox showcolorbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -731,8 +832,8 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtxt_errors;
+        private System.Windows.Forms.RichTextBox rtxt_history;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label lbl_StartPosX;
         private System.Windows.Forms.Label lbl_StartPosY;
@@ -748,6 +849,14 @@
         private System.Windows.Forms.Label lbl_canvasy;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox showtexturebox;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.PictureBox texture5;
+        private System.Windows.Forms.PictureBox texture4;
+        private System.Windows.Forms.PictureBox texture3;
+        private System.Windows.Forms.PictureBox texture2;
+        private System.Windows.Forms.PictureBox texture1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
