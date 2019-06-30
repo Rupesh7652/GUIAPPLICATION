@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GUIAPPLICATION
 {
-    class Line : Shape
+ public   class Line : Shape
     {
-        int x, y, size, size1;
+      public  int x, y, size, size1;
         Color c1;
         int texturestyle;
         Brush bb;

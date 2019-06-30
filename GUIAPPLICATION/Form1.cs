@@ -27,9 +27,9 @@ namespace GUIAPPLICATION
 
         Graphics g;
         Pen p;
-        Brush br;
+        Brush bb;
         int x, y = 0;
-        int x1, y1 = 0;
+        int x1, y1, x2, y2 = 0;
         public Form1()
         {
 
@@ -45,8 +45,8 @@ namespace GUIAPPLICATION
             lbl_canvasy.Text = y_canvas.ToString();
 
 
-            br = new HatchBrush(HatchStyle.Vertical, Color.Red, Color.FromArgb(255, 128, 255, 255));
-            g.FillEllipse(br, 0, 0, 100, 60);
+            bb = new HatchBrush(HatchStyle.Vertical, Color.Red, Color.FromArgb(255, 128, 255, 255));
+            g.FillEllipse(bb, 0, 0, 100, 60);
 
         }
 
@@ -99,6 +99,7 @@ namespace GUIAPPLICATION
         private void btnsquare_Click(object sender, EventArgs e)
         {
             selectshape = 6;
+          
         }
 
         private void btnploygon_Click(object sender, EventArgs e)
@@ -209,30 +210,53 @@ namespace GUIAPPLICATION
         //======================-----=====----======================DECLARING =========================---------- *  *  * * * * ** * 
         public int _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10, _size11, _size12;
 
+
+
+        /// <summary>
+        /// declaring variable for triangle
+        /// </summary>
+        public int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
+
+        private void drawareapanel_MouseUp(object sender, MouseEventArgs e)
+        {
+            start = false;
+            x = 0;
+            y = 0;
+
+            x2 = e.X;
+            y2 = e.Y;
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            drawareapanel.Refresh();
+            this.drawareapanel.BackgroundImage = null;
+        }
+
         private void texture5_Click(object sender, EventArgs e)
         {
             texturestyle = 5;
-            br = new HatchBrush(HatchStyle.Vertical, Color.Red, Color.Yellow);
+            bb = new HatchBrush(HatchStyle.Vertical, Color.Red, Color.Yellow);
             showtexturebox.BackgroundImage = texture5.BackgroundImage;
         }
 
         private void texture4_Click(object sender, EventArgs e)
         {
             texturestyle = 4;
-            br = new HatchBrush(HatchStyle.Horizontal, Color.Red, Color.Yellow);
+            bb = new HatchBrush(HatchStyle.Horizontal, Color.Red, Color.Yellow);
             showtexturebox.BackgroundImage = texture4.BackgroundImage;
         }
 
         private void texture3_Click(object sender, EventArgs e)
         {
-            br = new HatchBrush(HatchStyle.ForwardDiagonal, Color.Red, Color.Yellow);
+            bb = new HatchBrush(HatchStyle.ForwardDiagonal, Color.Red, Color.Yellow);
             texturestyle = 3;
             showtexturebox.BackgroundImage = texture3.BackgroundImage;
         }
 
         private void texture2_Click(object sender, EventArgs e)
         {
-            br = new HatchBrush(HatchStyle.DiagonalCross, Color.Red, Color.Yellow);
+            bb = new HatchBrush(HatchStyle.DiagonalCross, Color.Red, Color.Yellow);
             texturestyle = 2;
             showtexturebox.BackgroundImage = texture2.BackgroundImage;
         }
@@ -240,7 +264,7 @@ namespace GUIAPPLICATION
         private void texture1_Click(object sender, EventArgs e)
         {
             texturestyle = 1;
-            br = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
+            bb = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
             showtexturebox.BackgroundImage = texture1.BackgroundImage;
         }
 
@@ -249,10 +273,7 @@ namespace GUIAPPLICATION
 
 
 
-        /// <summary>
-        /// declaring variable for triangle
-        /// </summary>
-        public int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
+     
 
 
 
@@ -314,7 +335,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("line");
-                    c.set(texturestyle, br, paintcolor, _size1, _size2, _size3, _size4);
+                    c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3, _size4);
                     c.draw(g);
                 }
                 catch (Exception ex)
@@ -340,7 +361,7 @@ namespace GUIAPPLICATION
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("rectangle");
 
-                    c.set(texturestyle, br, paintcolor, _size1, _size2, _size3, _size4);
+                    c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3, _size4);
                     c.draw(g);
 
                 }
@@ -364,7 +385,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("rectangle");
-                    c.set(texturestyle, br, paintcolor, _size1, _size2, _size3, _size4);
+                    c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3, _size4);
 
                     c.draw(g);
                 }
@@ -386,7 +407,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("circle");
-                    c.set(texturestyle, br, paintcolor, _size1, _size2, _size3 * 2, _size3 * 2);
+                    c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3 * 2, _size3 * 2);
                     c.draw(g);
                 }
                 catch (Exception ex)
@@ -408,7 +429,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("circle");
-                    c.set(texturestyle, br, paintcolor, _size1, _size2, _size3 * 2, _size3 * 2);
+                    c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3 * 2, _size3 * 2);
                     //c.draw(set);
                     c.draw(g);
                 }
@@ -452,7 +473,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("triangle");
-                    c.set(texturestyle, br, paintcolor, xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2);
+                    c.set(texturestyle, bb, paintcolor, xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2);
                     //=============================== 
                     c.draw(g);
                 }
@@ -493,7 +514,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("triangle"); //new rectangles();
-                    c.set(texturestyle, br, paintcolor, xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2);
+                    c.set(texturestyle, bb, paintcolor, xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2);
                     c.draw(g);
                 }
                 catch (Exception ex)
@@ -523,7 +544,7 @@ namespace GUIAPPLICATION
 
                     ShapeFactory shapeFactory = new ShapeFactory();
                     Shape c = shapeFactory.GetShape("polygon");
-                    c.set(texturestyle, br, paintcolor, _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10);
+                    c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10);
                     c.draw(g);
                 }
                 catch (Exception ex)
@@ -598,7 +619,7 @@ namespace GUIAPPLICATION
                         for (int i = 0; i < _repeatNo; i++)
                         {
 
-                            c.set(texturestyle, br, paintcolor, _size1, _size2, (_size3 + _repeatAdd), (_size3 + _repeatAdd));
+                            c.set(texturestyle, bb, paintcolor, _size1, _size2, (_size3 + _repeatAdd), (_size3 + _repeatAdd));
                             c.draw(g);
                             _size1 = _size1 - (_repeatAddConstant / 2);
                             _size2 = _size2 - (_repeatAddConstant / 2);
@@ -635,7 +656,7 @@ namespace GUIAPPLICATION
 
                             for (int i = 0; i < _repeatNo; i++)
                             {
-                                c.set(texturestyle, br, paintcolor, _size1, _size2, _size3 + _repeatAddWidth, _size4 + _repeatAddHeight);
+                                c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3 + _repeatAddWidth, _size4 + _repeatAddHeight);
                                 c.draw(g);
                                 _size1 = _size1 - (_repeatAddConstantWidth / 2);
                                 _size2 = _size2 - (_repeatAddConstantHeight / 2);
@@ -688,7 +709,7 @@ namespace GUIAPPLICATION
 
                                         ShapeFactory shapeFactory = new ShapeFactory();
                                         Shape c = shapeFactory.GetShape("circle");
-                                        c.set(texturestyle, br, paintcolor, _size1, _size2, _size3 * 2, _size3 * 2);
+                                        c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3 * 2, _size3 * 2);
                                         c.draw(g);
                                     }
                                     catch (Exception ex)
@@ -708,7 +729,7 @@ namespace GUIAPPLICATION
 
                                         ShapeFactory shapeFactory = new ShapeFactory();
                                         Shape c = shapeFactory.GetShape("rectangle");
-                                        c.set(texturestyle, br, paintcolor, _size1, _size2, _size3, _size4);
+                                        c.set(texturestyle, bb, paintcolor, _size1, _size2, _size3, _size4);
 
                                         c.draw(g);
                                     }
@@ -789,6 +810,8 @@ namespace GUIAPPLICATION
         {
             lbl_cursorx.Text = e.X.ToString();
             lbl_cursory.Text = e.Y.ToString();
+
+
             if (start)
             {
                 if (selectshape == 1)

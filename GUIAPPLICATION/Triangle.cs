@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace GUIAPPLICATION
 {
-    class Triangle: Shape
+  public  class Triangle: Shape
     {
-        int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
+   public     int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
         Color c1;
         int texturestyle;
         Brush bb;

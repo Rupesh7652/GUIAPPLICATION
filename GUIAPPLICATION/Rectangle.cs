@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace GUIAPPLICATION
 {
-    class Rectangle: Shape
+  public  class Rectangle: Shape
     {
-        int x, y, size, size1;
+   public     int x, y, size, size1;
         int texturestyle;
         Brush bb;
         Color c1;

@@ -34,6 +34,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.showtexturebox = new System.Windows.Forms.PictureBox();
             this.showcolorbox = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,10 +50,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnploygon = new System.Windows.Forms.Button();
-            this.btnsquare = new System.Windows.Forms.Button();
             this.btnrectangle = new System.Windows.Forms.Button();
-            this.btntriangle = new System.Windows.Forms.Button();
             this.btneclipse = new System.Windows.Forms.Button();
             this.btnpen = new System.Windows.Forms.Button();
             this.drawareapanel = new System.Windows.Forms.Panel();
@@ -65,6 +63,13 @@
             this.rtxt_errors = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.rtxt_history = new System.Windows.Forms.RichTextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.texture5 = new System.Windows.Forms.PictureBox();
+            this.texture4 = new System.Windows.Forms.PictureBox();
+            this.texture3 = new System.Windows.Forms.PictureBox();
+            this.texture2 = new System.Windows.Forms.PictureBox();
+            this.texture1 = new System.Windows.Forms.PictureBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbl_StartPosX = new System.Windows.Forms.Label();
             this.lbl_StartPosY = new System.Windows.Forms.Label();
@@ -80,33 +85,25 @@
             this.lbl_canvasy = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.showtexturebox = new System.Windows.Forms.PictureBox();
-            this.texture5 = new System.Windows.Forms.PictureBox();
-            this.texture4 = new System.Windows.Forms.PictureBox();
-            this.texture3 = new System.Windows.Forms.PictureBox();
-            this.texture2 = new System.Windows.Forms.PictureBox();
-            this.texture1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture1)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -168,6 +165,17 @@
             this.panel2.Size = new System.Drawing.Size(548, 77);
             this.panel2.TabIndex = 1;
             // 
+            // showtexturebox
+            // 
+            this.showtexturebox.BackColor = System.Drawing.Color.DarkGray;
+            this.showtexturebox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showtexturebox.BackgroundImage")));
+            this.showtexturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.showtexturebox.Location = new System.Drawing.Point(229, 35);
+            this.showtexturebox.Name = "showtexturebox";
+            this.showtexturebox.Size = new System.Drawing.Size(46, 30);
+            this.showtexturebox.TabIndex = 14;
+            this.showtexturebox.TabStop = false;
+            // 
             // showcolorbox
             // 
             this.showcolorbox.BackColor = System.Drawing.SystemColors.Desktop;
@@ -225,6 +233,7 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
             this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
@@ -291,10 +300,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.btnploygon);
-            this.panel3.Controls.Add(this.btnsquare);
             this.panel3.Controls.Add(this.btnrectangle);
-            this.panel3.Controls.Add(this.btntriangle);
             this.panel3.Controls.Add(this.btneclipse);
             this.panel3.Controls.Add(this.btnpen);
             this.panel3.Location = new System.Drawing.Point(1, 133);
@@ -302,53 +308,17 @@
             this.panel3.Size = new System.Drawing.Size(56, 401);
             this.panel3.TabIndex = 2;
             // 
-            // btnploygon
-            // 
-            this.btnploygon.BackColor = System.Drawing.Color.DimGray;
-            this.btnploygon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnploygon.BackgroundImage")));
-            this.btnploygon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnploygon.Location = new System.Drawing.Point(1, 320);
-            this.btnploygon.Name = "btnploygon";
-            this.btnploygon.Size = new System.Drawing.Size(51, 51);
-            this.btnploygon.TabIndex = 8;
-            this.btnploygon.UseVisualStyleBackColor = false;
-            this.btnploygon.Click += new System.EventHandler(this.btnploygon_Click);
-            // 
-            // btnsquare
-            // 
-            this.btnsquare.BackColor = System.Drawing.Color.DimGray;
-            this.btnsquare.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnsquare.BackgroundImage")));
-            this.btnsquare.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnsquare.Location = new System.Drawing.Point(1, 254);
-            this.btnsquare.Name = "btnsquare";
-            this.btnsquare.Size = new System.Drawing.Size(51, 51);
-            this.btnsquare.TabIndex = 7;
-            this.btnsquare.UseVisualStyleBackColor = false;
-            this.btnsquare.Click += new System.EventHandler(this.btnsquare_Click);
-            // 
             // btnrectangle
             // 
             this.btnrectangle.BackColor = System.Drawing.Color.DimGray;
             this.btnrectangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnrectangle.BackgroundImage")));
             this.btnrectangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnrectangle.Location = new System.Drawing.Point(2, 184);
+            this.btnrectangle.Location = new System.Drawing.Point(2, 128);
             this.btnrectangle.Name = "btnrectangle";
             this.btnrectangle.Size = new System.Drawing.Size(51, 51);
             this.btnrectangle.TabIndex = 6;
             this.btnrectangle.UseVisualStyleBackColor = false;
             this.btnrectangle.Click += new System.EventHandler(this.btnrectangle_Click);
-            // 
-            // btntriangle
-            // 
-            this.btntriangle.BackColor = System.Drawing.Color.DimGray;
-            this.btntriangle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btntriangle.BackgroundImage")));
-            this.btntriangle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btntriangle.Location = new System.Drawing.Point(2, 119);
-            this.btntriangle.Name = "btntriangle";
-            this.btntriangle.Size = new System.Drawing.Size(50, 45);
-            this.btntriangle.TabIndex = 5;
-            this.btntriangle.UseVisualStyleBackColor = false;
-            this.btntriangle.Click += new System.EventHandler(this.btntriangle_Click);
             // 
             // btneclipse
             // 
@@ -376,7 +346,7 @@
             // 
             // drawareapanel
             // 
-            this.drawareapanel.BackColor = System.Drawing.Color.Gray;
+            this.drawareapanel.BackColor = System.Drawing.Color.White;
             this.drawareapanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.drawareapanel.Location = new System.Drawing.Point(61, 133);
             this.drawareapanel.Name = "drawareapanel";
@@ -387,6 +357,7 @@
             this.drawareapanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.drawareapanel_MouseDown);
             this.drawareapanel.MouseLeave += new System.EventHandler(this.drawareapanel_MouseLeave);
             this.drawareapanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawareapanel_MouseMove);
+            this.drawareapanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawareapanel_MouseUp);
             // 
             // rtxt_console
             // 
@@ -486,6 +457,85 @@
             this.rtxt_history.Size = new System.Drawing.Size(222, 137);
             this.rtxt_history.TabIndex = 1;
             this.rtxt_history.Text = "";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.texture5);
+            this.tabPage3.Controls.Add(this.texture4);
+            this.tabPage3.Controls.Add(this.texture3);
+            this.tabPage3.Controls.Add(this.texture2);
+            this.tabPage3.Controls.Add(this.texture1);
+            this.tabPage3.Controls.Add(this.richTextBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(228, 146);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Texture";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // texture5
+            // 
+            this.texture5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture5.BackgroundImage")));
+            this.texture5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture5.Location = new System.Drawing.Point(15, 72);
+            this.texture5.Name = "texture5";
+            this.texture5.Size = new System.Drawing.Size(30, 30);
+            this.texture5.TabIndex = 10;
+            this.texture5.TabStop = false;
+            this.texture5.Click += new System.EventHandler(this.texture5_Click);
+            // 
+            // texture4
+            // 
+            this.texture4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture4.BackgroundImage")));
+            this.texture4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture4.Location = new System.Drawing.Point(179, 26);
+            this.texture4.Name = "texture4";
+            this.texture4.Size = new System.Drawing.Size(30, 30);
+            this.texture4.TabIndex = 9;
+            this.texture4.TabStop = false;
+            this.texture4.Click += new System.EventHandler(this.texture4_Click);
+            // 
+            // texture3
+            // 
+            this.texture3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture3.BackgroundImage")));
+            this.texture3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture3.Location = new System.Drawing.Point(126, 26);
+            this.texture3.Name = "texture3";
+            this.texture3.Size = new System.Drawing.Size(30, 30);
+            this.texture3.TabIndex = 8;
+            this.texture3.TabStop = false;
+            this.texture3.Click += new System.EventHandler(this.texture3_Click);
+            // 
+            // texture2
+            // 
+            this.texture2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture2.BackgroundImage")));
+            this.texture2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture2.Location = new System.Drawing.Point(68, 26);
+            this.texture2.Name = "texture2";
+            this.texture2.Size = new System.Drawing.Size(30, 30);
+            this.texture2.TabIndex = 7;
+            this.texture2.TabStop = false;
+            this.texture2.Click += new System.EventHandler(this.texture2_Click);
+            // 
+            // texture1
+            // 
+            this.texture1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture1.BackgroundImage")));
+            this.texture1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture1.Location = new System.Drawing.Point(15, 26);
+            this.texture1.Name = "texture1";
+            this.texture1.Size = new System.Drawing.Size(30, 30);
+            this.texture1.TabIndex = 6;
+            this.texture1.TabStop = false;
+            this.texture1.Click += new System.EventHandler(this.texture1_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 5);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(222, 137);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
             // 
             // groupBox3
             // 
@@ -652,96 +702,6 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Y:";
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.texture5);
-            this.tabPage3.Controls.Add(this.texture4);
-            this.tabPage3.Controls.Add(this.texture3);
-            this.tabPage3.Controls.Add(this.texture2);
-            this.tabPage3.Controls.Add(this.texture1);
-            this.tabPage3.Controls.Add(this.richTextBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(228, 146);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Texture";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 5);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(222, 137);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
-            // 
-            // showtexturebox
-            // 
-            this.showtexturebox.BackColor = System.Drawing.Color.DarkGray;
-            this.showtexturebox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showtexturebox.BackgroundImage")));
-            this.showtexturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.showtexturebox.Location = new System.Drawing.Point(229, 35);
-            this.showtexturebox.Name = "showtexturebox";
-            this.showtexturebox.Size = new System.Drawing.Size(46, 30);
-            this.showtexturebox.TabIndex = 14;
-            this.showtexturebox.TabStop = false;
-            // 
-            // texture5
-            // 
-            this.texture5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture5.BackgroundImage")));
-            this.texture5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.texture5.Location = new System.Drawing.Point(15, 72);
-            this.texture5.Name = "texture5";
-            this.texture5.Size = new System.Drawing.Size(30, 30);
-            this.texture5.TabIndex = 10;
-            this.texture5.TabStop = false;
-            this.texture5.Click += new System.EventHandler(this.texture5_Click);
-            // 
-            // texture4
-            // 
-            this.texture4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture4.BackgroundImage")));
-            this.texture4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.texture4.Location = new System.Drawing.Point(179, 26);
-            this.texture4.Name = "texture4";
-            this.texture4.Size = new System.Drawing.Size(30, 30);
-            this.texture4.TabIndex = 9;
-            this.texture4.TabStop = false;
-            this.texture4.Click += new System.EventHandler(this.texture4_Click);
-            // 
-            // texture3
-            // 
-            this.texture3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture3.BackgroundImage")));
-            this.texture3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.texture3.Location = new System.Drawing.Point(126, 26);
-            this.texture3.Name = "texture3";
-            this.texture3.Size = new System.Drawing.Size(30, 30);
-            this.texture3.TabIndex = 8;
-            this.texture3.TabStop = false;
-            this.texture3.Click += new System.EventHandler(this.texture3_Click);
-            // 
-            // texture2
-            // 
-            this.texture2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture2.BackgroundImage")));
-            this.texture2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.texture2.Location = new System.Drawing.Point(68, 26);
-            this.texture2.Name = "texture2";
-            this.texture2.Size = new System.Drawing.Size(30, 30);
-            this.texture2.TabIndex = 7;
-            this.texture2.TabStop = false;
-            this.texture2.Click += new System.EventHandler(this.texture2_Click);
-            // 
-            // texture1
-            // 
-            this.texture1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture1.BackgroundImage")));
-            this.texture1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.texture1.Location = new System.Drawing.Point(15, 26);
-            this.texture1.Name = "texture1";
-            this.texture1.Size = new System.Drawing.Size(30, 30);
-            this.texture1.TabIndex = 6;
-            this.texture1.TabStop = false;
-            this.texture1.Click += new System.EventHandler(this.texture1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -772,6 +732,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -779,19 +740,18 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.texture5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texture5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texture4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texture3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texture2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.texture1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -817,10 +777,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnploygon;
-        private System.Windows.Forms.Button btnsquare;
         private System.Windows.Forms.Button btnrectangle;
-        private System.Windows.Forms.Button btntriangle;
         private System.Windows.Forms.Button btneclipse;
         private System.Windows.Forms.Button btnpen;
         private System.Windows.Forms.Panel drawareapanel;

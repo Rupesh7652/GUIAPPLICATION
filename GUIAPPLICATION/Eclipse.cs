@@ -8,9 +8,9 @@ using System.Drawing.Drawing2D;
 
 namespace GUIAPPLICATION
 {
-    class Circle: Shape
+  public  class Circle: Shape
     {
-        int x, y, size, size1;
+    public    int x, y, size, size1;
         Color c1;
         int texturestyle;
         Brush bb;

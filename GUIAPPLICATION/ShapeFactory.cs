@@ -31,10 +31,10 @@ namespace GUIAPPLICATION
             {
                 return new Polygon();
             }
-            else if (shapeType == "square")
-            {
-                return new Square();
-            }
+            //else if (shapeType == "square")
+            //{
+            //    return new Square();
+            //}
             return null;
         }
     }
