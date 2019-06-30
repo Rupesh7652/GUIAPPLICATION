@@ -9,8 +9,6 @@ namespace GUI.UnitTest
     public class TriangleTest
     {
 
-
-       
         int texturestyle;
         Brush bb;
         Color c1 = Color.Black;

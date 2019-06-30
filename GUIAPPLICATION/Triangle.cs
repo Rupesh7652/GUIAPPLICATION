@@ -8,7 +8,7 @@ namespace GUIAPPLICATION
 {
   public  class Triangle: Shape
     {
-   public     int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
+      int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
         Color c1;
         int texturestyle;
         Brush bb;
